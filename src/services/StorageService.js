@@ -1,6 +1,6 @@
 import * as SQLite from 'expo-sqlite';
 import { v4 as uuidv4 } from 'uuid';
-import 'react-native-get-random-values';
+
 
 // Initialize the database
 let db;

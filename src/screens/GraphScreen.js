@@ -106,7 +106,7 @@ export default function GraphScreen({ navigation }) {
                         x2={link.target.x}
                         y2={link.target.y}
                         stroke="#ccc"
-                        strokeWidth="2"
+                        strokeWidth={2}
                     />
                 ))}
                 {nodes.map((node, i) => (
@@ -114,7 +114,7 @@ export default function GraphScreen({ navigation }) {
                         <Circle
                             cx={node.x}
                             cy={node.y}
-                            r="20"
+                            r={20}
                             fill={node.type === 'voice' ? '#FF9500' : node.type === 'image' ? '#FF2D55' : '#007AFF'}
                             onPress={() => navigation.navigate('NoteDetail', { note: node })} // Pass original note? Need to refetch or pass partial
                         />
@@ -122,7 +122,7 @@ export default function GraphScreen({ navigation }) {
                             x={node.x}
                             y={node.y + 30}
                             fill="#333"
-                            fontSize="10"
+                            fontSize={10}
                             textAnchor="middle"
                         >
                             {node.title.substring(0, 10)}
